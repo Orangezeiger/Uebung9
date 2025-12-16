@@ -12,4 +12,9 @@ public class Passenger {
         this.ticket = ticket;
         visited = 0;
     }
+
+    @Override
+    public String toString() {
+        return "(Name: " + name + ", Planned: " + planned + ", Visited: " + visited + ", Ticket: " + ticket + ")";
+    }
 }

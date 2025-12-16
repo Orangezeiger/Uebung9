@@ -49,13 +49,23 @@ public class Bus {
     }
 
     public void transferPassengers(Bus otherBus, String[] passengerNames){
+        ArrayList<Passenger> transfer = new ArrayList<>();
         for(Passenger p : passengers){
             for(String name : passengerNames){
                 if(p.name.equals(name)){
-                    otherBus.enterBus(p);
-                    passengers.remove(p);
+                    transfer.add(p);
                 }
             }
         }
+
+        for(Passenger p: transfer){
+            otherBus.enterBus(p);
+            passengers.remove(p);
+        }
+    }
+
+    @Override
+    public String toString() {
+        return passengers.toString();
     }
 }
