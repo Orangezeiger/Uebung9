@@ -8,22 +8,22 @@ public class H2_main {
         A.enterBus(new Passenger("Lenny", 4, false));
 
         Bus B = new Bus();
-        System.out.println(A.toString());
+        System.out.println(A);
 
         A.nextStop();
-        System.out.println(A.toString());
+        System.out.println(A);
 
         A.nextStop(new Passenger[]{new Passenger("Jamal", 2, false)});
-        System.out.println(A.toString());
+        System.out.println(A);
 
         A.nextStop();
-        System.out.println(A.toString());
+        System.out.println(A);
 
         System.out.println(A.findPassengersWithoutTickets());
-        System.out.println(A.toString());
+        System.out.println(A);
 
-        System.out.println(B.toString());
+        System.out.println(B);
         A.transferPassengers(B, new String[]{"Max"});
-        System.out.println(B.toString());
+        System.out.println(B);
     }
 }
