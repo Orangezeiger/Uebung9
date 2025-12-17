@@ -41,7 +41,7 @@ public class Bus {
         for (int i = passengers.size() - 1; i >= 0; i--) {
             Passenger p = passengers.get(i);
             if (!p.ticket) {
-                invalid.add(0,p);
+                invalid.add(p);
                 passengers.remove(i);
             }
         }
@@ -57,7 +57,7 @@ public class Bus {
                 }
             }
         }
-
+        
         for(Passenger p: transfer){
             otherBus.enterBus(p);
             passengers.remove(p);
